@@ -1,0 +1,126 @@
+{% block content %}
+<div class="row">
+    <div class="col-6  col-md-4 col-lg-4 col-xl-4 mb-2 pt-1">
+        <div class="card">
+            <div class="card card-body">
+                <form  method="post"  name="formulario" id="formulario_employee">
+                    <div class="form-group">
+                        <input autocomplete="off" type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Apellidos" id="Apellidos" placeholder="Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="Fecha_Nacimiento" id="Fecha_Nacimiento" placeholder="Fecha_Nacimiento">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Numero_Empleado" id="Numero_Empleado" placeholder="Numero_Empleado">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Curp" id="Curp"" placeholder="Curp">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Ssn" id="Ssn" placeholder="Ssn">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Telefono" id="Telefono" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Nacionalidad" id="Nacionalidad" placeholder="Nacionalidad">
+                    </div>
+                    <button  class="btn btn-primary btn-block">
+                        Crear Empleado
+                    </button>
+                </form>
+                </div>
+            </div> 
+        </div> 
+    <div class="col-6  col-md-4 col-lg-4 col-xl-4 mb-2 pt-1">
+        <div class="card">
+            <div class="card card-body">
+                <form  name="formulario_update" id="formulario_employee_update">
+
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="id" id="id" placeholder="id_empleado">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" type="text" class="form-control" name="Nombre" id="Nombre_up" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Apellidos" id="Apellidos_up" placeholder="Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="Fecha_Nacimiento" id="Fecha_Nacimiento_up" placeholder="Fecha_Nacimiento">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Numero_Empleado" id="Numero_Empleado_up" placeholder="Numero_Empleado">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Curp" id="Curp_up"" placeholder="Curp">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Ssn" id="Ssn_up" placeholder="Ssn">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="Telefono" id="Telefono_up" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Nacionalidad" id="Nacionalidad_up" placeholder="Nacionalidad">
+                    </div>
+                    <button  class="btn btn-secondary">
+                        Actualizar Empleado
+                    </button>
+                </form>
+            </div>
+            </div> 
+        </div> 
+        <div class="col-6  col-md-4 col-lg-4 col-xl-4 mb-2 pt-1">
+            <div class="card">
+                <div class="card card-body">
+                    <form method="post"  id="formulario_employee_delete">
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="id_empleado" id="id_empleado" placeholder="id_empleado">
+                        </div>
+                        <div class="form-group">
+                            <input autocomplete="off" type="hidden" class="form-control" name="Nombre" id="Nombre_del" placeholder="Nombre">
+                        </div>
+                        <button   class="btn btn-danger btn-delete">
+                            Borrar Empleado
+                        </button>
+                    </form>
+                </div>
+                </div> 
+            </div> 
+            <div class="table-responsive">
+                <div class="container">
+                    <div class="alert alert-dark" role="alert">
+                        <div class="message"><a id ="responseValue">-</a></div>
+                    </div>
+                    <div class="title_head_employee_table">
+                        <h1>Empleados</h1>
+                    </div>
+                    <table id="tabla_resultados" class="table table-dark table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Fecha Nacimiento</th>
+                            <th scope="col">Número Empleado</th>
+                            <th scope="col">Curp</th>
+                            <th scope="col">Ssn</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Nacionalidad</th>
+                            <th scope="col">Emp</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>  
+            </div> 
+</div>
+{% endblock %}
+

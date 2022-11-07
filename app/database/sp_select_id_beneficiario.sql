@@ -1,0 +1,10 @@
+CREATE PROCEDURE pa_SELECT_BENEFICIARIO_X_ID
+(
+@id AS INT
+)
+AS
+BEGIN
+SELECT [id]
+  FROM [dbo].[beneficiarios]
+  WHERE id=@id 
+END

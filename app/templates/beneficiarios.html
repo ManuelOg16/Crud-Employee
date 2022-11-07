@@ -1,0 +1,25 @@
+<html lang="es">
+    {% block head %}
+        {% include 'head.html' %}  
+    {% endblock %}
+    <body id="body-pd">
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock %}
+        {% block navbar %}
+            {% include 'navbar.html' %}
+        {% endblock %}
+        <main>    
+            {% include 'beneficiary_form.html' %}   
+        </main>   
+        <!-- js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src=" ../static/js/hamburguesa.js"></script>
+        <script src=" ../static/js/service_get_employ.js"></script>
+        <script src=" ../static/js/service_post_employ_benef.js"></script>
+        <script src="../static/js/service_update.js"></script>
+        <script src="../static/js/service_delete.js"></script>
+        <!-- js  -->
+    </body>
+</html>

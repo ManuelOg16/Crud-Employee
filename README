@@ -1,0 +1,87 @@
+# Screenshot
+
+![](docs/api_front.jpg)
+![](docs/doc_api.jpg)
+
+
+##CORRER EL PROYECTO EN LOCAL
+
+### Pasos para correr el proyecto en local
+
+------Crear un folder para clonar el proyecto
+
+------Clonar el proyecto desde el repositorio publico
+        git clone https://
+
+------Ir al directorio principal del proyecto  desde un command.. cd Crud-Employee 
+
+------Crear un ambiente virtual con los siguientes comandos:
+
+    -Windows c/s path:
+        python -m venv venv 
+
+------Activar el  ambiente virtual con los siguientes comandos:
+
+    -Windows c/s path:
+        venv\Scripts\Activate
+
+    -Linux:
+        source venv/bin/activate
+
+------- set el archivo principal:
+    -Windows:
+        set FLASK_APP=main.py
+
+    -Linux:
+        export FLASK_APP=main.py
+
+--------Instalar el archivo requirements.txt con el siguiente comando:
+      pip install -r requirements.txt
+
+--------Acceder a la base de datos por linea de comandos u interfaz y crear el nombre de la base de datos.
+
+--------Crear el archivo .env en la raiz del proyecto a la misma altura de los demas folders, adicionar lo siguiente y las credenciales de su base de datos:
+    FLASK_APP=main.py
+    FLASK_ENV=local
+    FLASK_PORT=5000
+    ENVIRONMENT=LOCAL
+    SERVER=SERVER
+    DATABASE=DATABASENAME
+    UID=UID
+    PWD=PASSWORD
+
+---------Creación de las tablas en la base de datos primera vez:
+---Por primera vez ejecutar los siguientes comando:
+     flask db init
+     flask db migrate -m "Initial database"
+     flask db upgrade
+
+-----Despues de tener el directorio migrate creado para hacer una actualización en la db como borrar un campo, adicionar un campo , dado el caso,
+agregar una tabla, ejecutar solamente:
+     flask db migrate -m "Initial database"
+     flask db upgrade
+
+-------- Ir al folder database por linea de comandos con el ambiente virtual activo y ejecutar el siguiente comando para crear los procedimientos almacenados de manera automática:
+
+   En la ruta Crud-Employee\app\database    ejecutar:
+     python init_db.py
+
+----Si todos los pasos se ejecutaron correctamente iniciar el Flask para consumir la API con el Swagger documentación:
+
+   flask run --reload
+   Ir a la Ip  http://127.0.0.1:5000/api/v1/doc
+
+-----Para consumir desde el frontend:
+   Ir a la Ip  http://127.0.0.1:5000
+
+
+---Correr las pruebas con pytest
+------Tener la aplicación corriendo
+------Ir al archivo test_Employee_Benf.py    y setear los ids a conveniencia en las variables:
+      var_id_employee=1
+      var_id_beneficiary=1
+------Lanzar el siguiente comando con el ambiente virtual activado:
+      pytest app/pytest/tests/test_Employee_Benf.py
+
+---Nota:
+    Primero crear un empleado y luego sus beneficiarios, de igual manera la logica tiene validadores.

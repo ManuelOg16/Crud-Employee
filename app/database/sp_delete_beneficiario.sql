@@ -1,0 +1,8 @@
+CREATE PROCEDURE pa_DELETE_BENEFICIARIO
+(
+@id AS INT
+)
+AS
+BEGIN
+DELETE FROM [dbo].[beneficiarios] WHERE id=@id 
+END

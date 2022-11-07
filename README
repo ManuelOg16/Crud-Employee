@@ -11,7 +11,7 @@
 ------Crear un folder para clonar el proyecto
 
 ------Clonar el proyecto desde el repositorio publico
-        git clone https://
+        git clone https://github.com/ManuelOg16/Crud-Employee.git
 
 ------Ir al directorio principal del proyecto  desde un command.. cd Crud-Employee 
 
